@@ -1144,7 +1144,7 @@ int main(void* ds, int a, int b, uintptr_t c, uintptr_t d)
 #endif
     gdb_remote_syscall("write", 3, 0, (uintptr_t)1, (uintptr_t)"done\n", (uintptr_t)5);
 #ifndef DEBUG
-    notify("ps5-kstuff successfully loaded");
+    notify("ps5-kstuff 已注入!\n关注b站：爱折腾的老九");
     return 0;
 #endif
     asm volatile("ud2");
