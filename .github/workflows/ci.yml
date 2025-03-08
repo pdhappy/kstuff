@@ -1,14 +1,6 @@
 name: CI
 
 on:
-  push:
-    paths-ignore:
-      - "**/*.md"
-      - '**/*.txt'
-  pull_request:
-    paths-ignore:
-      - "**/*.md"
-      - '**/*.txt'
   workflow_dispatch:
 
 concurrency:
@@ -39,7 +31,7 @@ jobs:
         bash ci-ps5-kstuff-ldr.sh
 
     - name: Upload Payload
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@main
       with:
         name: Payload
         path: ./ps5-kstuff-ldr/kstuff.elf
